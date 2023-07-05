@@ -1,97 +1,169 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-07-05 13:44:37'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/07/04/12%E6%9C%88/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-04T10:52:20.326Z" title="Created 2023-07-04 18:52:20">2023-07-04</time></span></div><div class="content">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-12月" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/04/12%E6%9C%88/" class="article-date">
-  <time class="dt-published" datetime="2023-07-04T10:52:20.326Z" itemprop="datePublished">2023-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <!doctype html>
-      <html>
-      <head>
-        <meta charset="utf-8"/>
-        <title>12月</title>
         
-        <style>
+        12月
+        
+        
           html, body { margin: 0; padding: 0; background-color: #ffffff; }
           .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
           @media (max-width: 767px) { .markdown-body { padding: 15px; } }
@@ -100,708 +172,4 @@
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #24292e;
-  font-family: system-ui, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;;
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
-}
-
-.markdown-body details {
-  display: block;
-}
-
-.markdown-body summary {
-  display: list-item;
-}
-
-.markdown-body a {
-  background-color: initial;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline-width: 0;
-}
-
-.markdown-body strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
-
-.markdown-body img {
-  border-style: none;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre {
-  font-family: monospace,monospace;
-  font-size: 1em;
-}
-
-.markdown-body hr {
-  box-sizing: initial;
-  height: 0;
-  overflow: visible;
-}
-
-.markdown-body input {
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body input {
-  overflow: visible;
-}
-
-.markdown-body [type=checkbox] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body * {
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.markdown-body a {
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.markdown-body a:hover {
-  text-decoration: underline;
-}
-
-.markdown-body strong {
-  font-weight: 600;
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-}
-
-.markdown-body hr:after,
-.markdown-body hr:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body hr:after {
-  clear: both;
-}
-
-.markdown-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body details summary {
-  cursor: pointer;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body h1 {
-  font-size: 32px;
-}
-
-.markdown-body h1,
-.markdown-body h2 {
-  font-weight: 600;
-}
-
-.markdown-body h2 {
-  font-size: 24px;
-}
-
-.markdown-body h3 {
-  font-size: 20px;
-}
-
-.markdown-body h3,
-.markdown-body h4 {
-  font-weight: 600;
-}
-
-.markdown-body h4 {
-  font-size: 16px;
-}
-
-.markdown-body h5 {
-  font-size: 14px;
-}
-
-.markdown-body h5,
-.markdown-body h6 {
-  font-weight: 600;
-}
-
-.markdown-body h6 {
-  font-size: 12px;
-}
-
-.markdown-body p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ol,
-.markdown-body ul {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ol ol ol,
-.markdown-body ol ul ol,
-.markdown-body ul ol ol,
-.markdown-body ul ul ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body dd {
-  margin-left: 0;
-}
-
-.markdown-body code,
-.markdown-body pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body input::-webkit-inner-spin-button,
-.markdown-body input::-webkit-outer-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.markdown-body :checked+.radio-label {
-  position: relative;
-  z-index: 1;
-  border-color: #0366d6;
-}
-
-.markdown-body hr {
-  border-bottom-color: #eee;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
-}
-
-.markdown-body:after,
-.markdown-body:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body:after {
-  clear: both;
-}
-
-.markdown-body>:first-child {
-  margin-top: 0!important;
-}
-
-.markdown-body>:last-child {
-  margin-bottom: 0!important;
-}
-
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-
-.markdown-body blockquote,
-.markdown-body details,
-.markdown-body dl,
-.markdown-body ol,
-.markdown-body p,
-.markdown-body pre,
-.markdown-body table,
-.markdown-body ul {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: .25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
-}
-
-.markdown-body blockquote {
-  padding: 0 1em;
-  color: #6a737d;
-  border-left: .25em solid #dfe2e5;
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-}
-
-.markdown-body h1,
-.markdown-body h2 {
-  padding-bottom: .3em;
-  border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h2 {
-  font-size: 1.5em;
-}
-
-.markdown-body h3 {
-  font-size: 1.25em;
-}
-
-.markdown-body h4 {
-  font-size: 1em;
-}
-
-.markdown-body h5 {
-  font-size: .875em;
-}
-
-.markdown-body h6 {
-  font-size: .85em;
-  color: #6a737d;
-}
-
-.markdown-body ol,
-.markdown-body ul {
-  padding-left: 2em;
-}
-
-.markdown-body ol ol,
-.markdown-body ol ul,
-.markdown-body ul ol,
-.markdown-body ul ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body li {
-  word-wrap: break-all;
-}
-
-.markdown-body li>p {
-  margin-top: 16px;
-}
-
-.markdown-body li+li, .markdown-body li > ul {
-  margin-top: .25em;
-}
-
-.markdown-body ul li.task-list-item {
-  position: relative;
-  appearance: none;
-  list-style: none;
-}
-
-.markdown-body ul li.task-list-item.checked {
-  text-decoration-line: line-through;
-  color: #6e6e6e;
-}
-
-.markdown-body ul li.task-list-item:not(.checked) {
-  color: initial;
-}
-
-.markdown-body ul li.task-list-item::before {
-  content: '';
-  width: 13px;
-  height: 13px;
-  background-color: #fff;
-  position: absolute;
-  left: -28px;
-  top: 4px;
-  border-radius: 2px;
-  border: 2px solid #757575;
-}
-
-.markdown-body ul li.task-list-item.checked::before {
-  background-color: #1976d2;
-  border-color: #1976d2;
-}
-
-.markdown-body ul li.task-list-item.checked::after {
-  content: '';
-  position: absolute;
-  left: -22px;
-  top: 5px;
-  width: 4px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.markdown-body table {
-  width: 100%;
-  overflow: auto;
-}
-
-.markdown-body table th {
-  font-weight: 600;
-}
-
-.markdown-body table td,
-.markdown-body table th {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-.markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
-.markdown-body img {
-  max-width: 100%;
-  box-sizing: initial;
-  background-color: #fff;
-}
-
-.markdown-body p > img {
-  display: block;
-  margin: 0 auto;
-}
-
-.markdown-body img[align=right] {
-  padding-left: 20px;
-}
-
-.markdown-body img[align=left] {
-  padding-right: 20px;
-}
-
-.markdown-body code {
-  padding: .2em .4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27,31,35,.05);
-  border-radius: 3px;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: initial;
-  border: 0;
-}
-
-.markdown-body mark {
-  display: inline-flex;
-  background-color: #fff8c5;
-}
-          .ace-tm{ background: transparent!important; }.ace_static_highlight{ font-size: unset!important; }.ace_static_highlight {font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', 'Droid Sans Mono', monospace;font-size: 12px;white-space: pre-wrap}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;contain: none;}.ace_static_highlight.ace_show_gutter .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line { position: relative; }.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
-        </style>
-      </head>
-      <body>
-        <article class="markdown-body">
-          <h1>一晃三年过</h1>
-<pre><code><div class='ace-tm'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>从</span><span class='ace_cjk' style='width:NaNpx'>前</span> – <span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>杰</span><span class='ace_cjk' style='width:NaNpx'>伦</span> (Jay Chou)
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>词</span><span class='ace_cjk' style='width:NaNpx'>：</span><span class='ace_cjk' style='width:NaNpx'>方</span><span class='ace_cjk' style='width:NaNpx'>文</span><span class='ace_cjk' style='width:NaNpx'>山</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>曲</span><span class='ace_cjk' style='width:NaNpx'>：</span><span class='ace_cjk' style='width:NaNpx'>周</span><span class='ace_cjk' style='width:NaNpx'>杰</span><span class='ace_cjk' style='width:NaNpx'>伦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>编</span><span class='ace_cjk' style='width:NaNpx'>曲</span><span class='ace_cjk' style='width:NaNpx'>：</span><span class='ace_cjk' style='width:NaNpx'>黄</span><span class='ace_cjk' style='width:NaNpx'>雨</span><span class='ace_cjk' style='width:NaNpx'>勋</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>这</span><span class='ace_cjk' style='width:NaNpx'>风</span><span class='ace_cjk' style='width:NaNpx'>铃</span><span class='ace_cjk' style='width:NaNpx'>跟</span><span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>动</span><span class='ace_cjk' style='width:NaNpx'>很</span><span class='ace_cjk' style='width:NaNpx'>接</span><span class='ace_cjk' style='width:NaNpx'>近</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>这</span><span class='ace_cjk' style='width:NaNpx'>封</span><span class='ace_cjk' style='width:NaNpx'>信</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>怀</span><span class='ace_cjk' style='width:NaNpx'>念</span><span class='ace_cjk' style='width:NaNpx'>旅</span><span class='ace_cjk' style='width:NaNpx'>行</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>路</span><span class='ace_cjk' style='width:NaNpx'>过</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>太</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>轻</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>想</span><span class='ace_cjk' style='width:NaNpx'>要</span> <span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>风</span><span class='ace_cjk' style='width:NaNpx'>景</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>这</span><span class='ace_cjk' style='width:NaNpx'>别</span><span class='ace_cjk' style='width:NaNpx'>离</span><span class='ace_cjk' style='width:NaNpx'>被</span><span class='ace_cjk' style='width:NaNpx'>瓶</span><span class='ace_cjk' style='width:NaNpx'>装</span><span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>秘</span><span class='ace_cjk' style='width:NaNpx'>密</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>这</span><span class='ace_cjk' style='width:NaNpx'>雏</span><span class='ace_cjk' style='width:NaNpx'>菊</span><span class='ace_cjk' style='width:NaNpx'>美</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>像</span><span class='ace_cjk' style='width:NaNpx'>诗</span><span class='ace_cjk' style='width:NaNpx'>句</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>而</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>风</span><span class='ace_cjk' style='width:NaNpx'>中</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>你</span> <span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>消</span><span class='ace_cjk' style='width:NaNpx'>息</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>月</span><span class='ace_cjk' style='width:NaNpx'>光</span><span class='ace_cjk' style='width:NaNpx'>落</span><span class='ace_cjk' style='width:NaNpx'>雪</span><span class='ace_cjk' style='width:NaNpx'>地</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>枫</span><span class='ace_cjk' style='width:NaNpx'>红</span><span class='ace_cjk' style='width:NaNpx'>染</span><span class='ace_cjk' style='width:NaNpx'>秋</span><span class='ace_cjk' style='width:NaNpx'>季</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>相</span><span class='ace_cjk' style='width:NaNpx'>遇</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>重</span><span class='ace_cjk' style='width:NaNpx'>温</span><span class='ace_cjk' style='width:NaNpx'>午</span><span class='ace_cjk' style='width:NaNpx'>后</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>阳</span><span class='ace_cjk' style='width:NaNpx'>光</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>将</span><span class='ace_cjk' style='width:NaNpx'>吉</span><span class='ace_cjk' style='width:NaNpx'>他</span><span class='ace_cjk' style='width:NaNpx'>斜</span><span class='ace_cjk' style='width:NaNpx'>背</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>肩</span><span class='ace_cjk' style='width:NaNpx'>上</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>跟</span><span class='ace_cjk' style='width:NaNpx'>多</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>前</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>样</span> <span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>们</span><span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>唱</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>任</span><span class='ace_cjk' style='width:NaNpx'>何</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>方</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>人</span><span class='ace_cjk' style='width:NaNpx'>节</span><span class='ace_cjk' style='width:NaNpx'>卡</span><span class='ace_cjk' style='width:NaNpx'>片</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>永</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>广</span><span class='ace_cjk' style='width:NaNpx'>场</span><span class='ace_cjk' style='width:NaNpx'>公</span><span class='ace_cjk' style='width:NaNpx'>园</span> <span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>起</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>演</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>校</span><span class='ace_cjk' style='width:NaNpx'>园</span><span class='ace_cjk' style='width:NaNpx'>旁</span><span class='ace_cjk' style='width:NaNpx'>糖</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>店</span> <span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>忆</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>微</span><span class='ace_cjk' style='width:NaNpx'>甜</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>初</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>整</span><span class='ace_cjk' style='width:NaNpx'>遍</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>从</span><span class='ace_cjk' style='width:NaNpx'>前</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>秋</span><span class='ace_cjk' style='width:NaNpx'>天</span> <span class='ace_cjk' style='width:NaNpx'>说</span><span class='ace_cjk' style='width:NaNpx'>了</span><span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>见</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>已</span><span class='ace_cjk' style='width:NaNpx'>走</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>将</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>深</span><span class='ace_cjk' style='width:NaNpx'>埋</span><span class='ace_cjk' style='width:NaNpx'>在</span> <span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>面</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>微</span><span class='ace_cjk' style='width:NaNpx'>风</span><span class='ace_cjk' style='width:NaNpx'>需</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>竹</span><span class='ace_cjk' style='width:NaNpx'>林</span> <span class='ace_cjk' style='width:NaNpx'>溪</span><span class='ace_cjk' style='width:NaNpx'>流</span><span class='ace_cjk' style='width:NaNpx'>需</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>蜻</span><span class='ace_cjk' style='width:NaNpx'>蜓</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>乡</span><span class='ace_cjk' style='width:NaNpx'>愁</span><span class='ace_cjk' style='width:NaNpx'>般</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>离</span><span class='ace_cjk' style='width:NaNpx'>开</span> <span class='ace_cjk' style='width:NaNpx'>需</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>片</span><span class='ace_cjk' style='width:NaNpx'>片</span><span class='ace_cjk' style='width:NaNpx'>浮</span><span class='ace_cjk' style='width:NaNpx'>萍</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>雨</span><span class='ace_cjk' style='width:NaNpx'>季</span> <span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>忆</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>特</span><span class='ace_cjk' style='width:NaNpx'>安</span><span class='ace_cjk' style='width:NaNpx'>静</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>哭</span><span class='ace_cjk' style='width:NaNpx'>过</span><span class='ace_cjk' style='width:NaNpx'>后</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>决</span><span class='ace_cjk' style='width:NaNpx'>定</span> <span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>否</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>能</span><span class='ace_cjk' style='width:NaNpx'>进</span><span class='ace_cjk' style='width:NaNpx'>行</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>傻</span><span class='ace_cjk' style='width:NaNpx'>傻</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>待</span> <span class='ace_cjk' style='width:NaNpx'>傻</span><span class='ace_cjk' style='width:NaNpx'>傻</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>春</span><span class='ace_cjk' style='width:NaNpx'>暖</span><span class='ace_cjk' style='width:NaNpx'>花</span><span class='ace_cjk' style='width:NaNpx'>开</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>终</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>明</span><span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>白</span> <span class='ace_cjk' style='width:NaNpx'>等</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>来</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>青</span><span class='ace_cjk' style='width:NaNpx'>春</span><span class='ace_cjk' style='width:NaNpx'>属</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>白</span> <span class='ace_cjk' style='width:NaNpx'>阳</span><span class='ace_cjk' style='width:NaNpx'>光</span><span class='ace_cjk' style='width:NaNpx'>属</span><span class='ace_cjk' style='width:NaNpx'>于</span><span class='ace_cjk' style='width:NaNpx'>窗</span><span class='ace_cjk' style='width:NaNpx'>台</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>而</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>想</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>属</span><span class='ace_cjk' style='width:NaNpx'>于</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>个</span><span class='ace_cjk' style='width:NaNpx'>拥</span><span class='ace_cjk' style='width:NaNpx'>有</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>未</span><span class='ace_cjk' style='width:NaNpx'>来</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>纸</span><span class='ace_cjk' style='width:NaNpx'>上</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>彩</span><span class='ace_cjk' style='width:NaNpx'>虹</span> <span class='ace_cjk' style='width:NaNpx'>用</span><span class='ace_cjk' style='width:NaNpx'>素</span><span class='ace_cjk' style='width:NaNpx'>描</span><span class='ace_cjk' style='width:NaNpx'>画</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>钟</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>修</span><span class='ace_cjk' style='width:NaNpx'>改</span> <span class='ace_cjk' style='width:NaNpx'>回</span><span class='ace_cjk' style='width:NaNpx'>忆</span><span class='ace_cjk' style='width:NaNpx'>之</span><span class='ace_cjk' style='width:NaNpx'>中</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>笑</span><span class='ace_cjk' style='width:NaNpx'>容</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>该</span><span class='ace_cjk' style='width:NaNpx'>怎</span><span class='ace_cjk' style='width:NaNpx'>么</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>形</span><span class='ace_cjk' style='width:NaNpx'>容</span> <span class='ace_cjk' style='width:NaNpx'>为</span><span class='ace_cjk' style='width:NaNpx'>思</span><span class='ace_cjk' style='width:NaNpx'>念</span><span class='ace_cjk' style='width:NaNpx'>酝</span><span class='ace_cjk' style='width:NaNpx'>酿</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>痛</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>夜</span><span class='ace_cjk' style='width:NaNpx'>空</span><span class='ace_cjk' style='width:NaNpx'>霓</span><span class='ace_cjk' style='width:NaNpx'>虹</span> <span class='ace_cjk' style='width:NaNpx'>都</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>不</span><span class='ace_cjk' style='width:NaNpx'>要</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>繁</span><span class='ace_cjk' style='width:NaNpx'>荣</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>或</span><span class='ace_cjk' style='width:NaNpx'>许</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>趟</span><span class='ace_cjk' style='width:NaNpx'>沙</span><span class='ace_cjk' style='width:NaNpx'>滩</span> <span class='ace_cjk' style='width:NaNpx'>或</span><span class='ace_cjk' style='width:NaNpx'>许</span><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>夕</span><span class='ace_cjk' style='width:NaNpx'>阳</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>或</span><span class='ace_cjk' style='width:NaNpx'>许</span><span class='ace_cjk' style='width:NaNpx'>任</span><span class='ace_cjk' style='width:NaNpx'>何</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>个</span><span class='ace_cjk' style='width:NaNpx'>可</span><span class='ace_cjk' style='width:NaNpx'>以</span><span class='ace_cjk' style='width:NaNpx'>想</span><span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>事</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>方</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>绪</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>咖</span><span class='ace_cjk' style='width:NaNpx'>啡</span><span class='ace_cjk' style='width:NaNpx'>馆</span> <span class='ace_cjk' style='width:NaNpx'>被</span><span class='ace_cjk' style='width:NaNpx'>调</span><span class='ace_cjk' style='width:NaNpx'>成</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>篇</span><span class='ace_cjk' style='width:NaNpx'>文</span><span class='ace_cjk' style='width:NaNpx'>章</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>彻</span><span class='ace_cjk' style='width:NaNpx'>底</span><span class='ace_cjk' style='width:NaNpx'>爱</span><span class='ace_cjk' style='width:NaNpx'>上</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>如</span><span class='ace_cjk' style='width:NaNpx'>诗</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>般</span><span class='ace_cjk' style='width:NaNpx'>透</span><span class='ace_cjk' style='width:NaNpx'>明</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>泪</span><span class='ace_cjk' style='width:NaNpx'>光</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>人</span><span class='ace_cjk' style='width:NaNpx'>节</span><span class='ace_cjk' style='width:NaNpx'>卡</span><span class='ace_cjk' style='width:NaNpx'>片</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>永</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>广</span><span class='ace_cjk' style='width:NaNpx'>场</span><span class='ace_cjk' style='width:NaNpx'>公</span><span class='ace_cjk' style='width:NaNpx'>园</span> <span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>起</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>演</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>校</span><span class='ace_cjk' style='width:NaNpx'>园</span><span class='ace_cjk' style='width:NaNpx'>旁</span><span class='ace_cjk' style='width:NaNpx'>糖</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>店</span> <span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>忆</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>微</span><span class='ace_cjk' style='width:NaNpx'>甜</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>初</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>整</span><span class='ace_cjk' style='width:NaNpx'>遍</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>从</span><span class='ace_cjk' style='width:NaNpx'>前</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>秋</span><span class='ace_cjk' style='width:NaNpx'>天</span> <span class='ace_cjk' style='width:NaNpx'>说</span><span class='ace_cjk' style='width:NaNpx'>了</span><span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>见</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>已</span><span class='ace_cjk' style='width:NaNpx'>走</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>将</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>深</span><span class='ace_cjk' style='width:NaNpx'>埋</span><span class='ace_cjk' style='width:NaNpx'>在</span> <span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>面</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>重</span><span class='ace_cjk' style='width:NaNpx'>温</span><span class='ace_cjk' style='width:NaNpx'>午</span><span class='ace_cjk' style='width:NaNpx'>后</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>阳</span><span class='ace_cjk' style='width:NaNpx'>光</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>将</span><span class='ace_cjk' style='width:NaNpx'>吉</span><span class='ace_cjk' style='width:NaNpx'>他</span><span class='ace_cjk' style='width:NaNpx'>斜</span><span class='ace_cjk' style='width:NaNpx'>背</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>肩</span><span class='ace_cjk' style='width:NaNpx'>上</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>跟</span><span class='ace_cjk' style='width:NaNpx'>多</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>前</span><span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>样</span> <span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>们</span><span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>唱</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>去</span><span class='ace_cjk' style='width:NaNpx'>任</span><span class='ace_cjk' style='width:NaNpx'>何</span><span class='ace_cjk' style='width:NaNpx'>地</span><span class='ace_cjk' style='width:NaNpx'>方</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>人</span><span class='ace_cjk' style='width:NaNpx'>节</span><span class='ace_cjk' style='width:NaNpx'>卡</span><span class='ace_cjk' style='width:NaNpx'>片</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>永</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>广</span><span class='ace_cjk' style='width:NaNpx'>场</span><span class='ace_cjk' style='width:NaNpx'>公</span><span class='ace_cjk' style='width:NaNpx'>园</span> <span class='ace_cjk' style='width:NaNpx'>一</span><span class='ace_cjk' style='width:NaNpx'>起</span><span class='ace_cjk' style='width:NaNpx'>表</span><span class='ace_cjk' style='width:NaNpx'>演</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>校</span><span class='ace_cjk' style='width:NaNpx'>园</span><span class='ace_cjk' style='width:NaNpx'>旁</span><span class='ace_cjk' style='width:NaNpx'>糖</span><span class='ace_cjk' style='width:NaNpx'>果</span><span class='ace_cjk' style='width:NaNpx'>店</span> <span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>忆</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>在</span><span class='ace_cjk' style='width:NaNpx'>微</span><span class='ace_cjk' style='width:NaNpx'>甜</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>看</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>脸</span> <span class='ace_cjk' style='width:NaNpx'>轻</span><span class='ace_cjk' style='width:NaNpx'>刷</span><span class='ace_cjk' style='width:NaNpx'>着</span><span class='ace_cjk' style='width:NaNpx'>和</span><span class='ace_cjk' style='width:NaNpx'>弦</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>初</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>是</span><span class='ace_cjk' style='width:NaNpx'>整</span><span class='ace_cjk' style='width:NaNpx'>遍</span> <span class='ace_cjk' style='width:NaNpx'>手</span><span class='ace_cjk' style='width:NaNpx'>写</span><span class='ace_cjk' style='width:NaNpx'>的</span><span class='ace_cjk' style='width:NaNpx'>从</span><span class='ace_cjk' style='width:NaNpx'>前</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>还</span><span class='ace_cjk' style='width:NaNpx'>记</span><span class='ace_cjk' style='width:NaNpx'>得</span><span class='ace_cjk' style='width:NaNpx'>那</span><span class='ace_cjk' style='width:NaNpx'>年</span><span class='ace_cjk' style='width:NaNpx'>秋</span><span class='ace_cjk' style='width:NaNpx'>天</span> <span class='ace_cjk' style='width:NaNpx'>说</span><span class='ace_cjk' style='width:NaNpx'>了</span><span class='ace_cjk' style='width:NaNpx'>再</span><span class='ace_cjk' style='width:NaNpx'>见</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>当</span><span class='ace_cjk' style='width:NaNpx'>恋</span><span class='ace_cjk' style='width:NaNpx'>情</span><span class='ace_cjk' style='width:NaNpx'>已</span><span class='ace_cjk' style='width:NaNpx'>走</span><span class='ace_cjk' style='width:NaNpx'>远</span>
-</div><div class='ace_line'><span class='ace_cjk' style='width:NaNpx'>我</span><span class='ace_cjk' style='width:NaNpx'>将</span><span class='ace_cjk' style='width:NaNpx'>你</span><span class='ace_cjk' style='width:NaNpx'>深</span><span class='ace_cjk' style='width:NaNpx'>埋</span><span class='ace_cjk' style='width:NaNpx'>在</span> <span class='ace_cjk' style='width:NaNpx'>心</span><span class='ace_cjk' style='width:NaNpx'>里</span><span class='ace_cjk' style='width:NaNpx'>面</span>
-</div></div></div></code></pre>
-
-        </article>
-      </body>
-      </html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/04/12%E6%9C%88/" data-id="cljo68a5k00003wvba00b6ws6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/07/04/12%E6%9C%88/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+  font-family: system-ui, -apple-system,BlinkMac ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/07/04/12%E6%9C%88/" title="No title">No title</a><time datetime="2023-07-04T10:52:20.326Z" title="Created 2023-07-04 18:52:20">2023-07-04</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">July 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-07-05T05:44:37.550Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
