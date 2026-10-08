@@ -1,169 +1,463 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>开心</title><meta name="author" content="Xiaoyu"><meta name="copyright" content="Xiaoyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="准备中">
-<meta property="og:type" content="website">
-<meta property="og:title" content="开心">
-<meta property="og:url" content="http://kaixinlp.cn/index.html">
-<meta property="og:site_name" content="开心">
-<meta property="og:description" content="准备中">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://kaixinlp.cn/img/avatar_pinkGirl.jpg">
-<meta property="article:author" content="Xiaoyu">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://kaixinlp.cn/img/avatar_pinkGirl.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://kaixinlp.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '开心',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-07-18 14:14:12'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff9f6">
+  <meta name="description" content="开心的小宇宙，收藏与你有关的每一段日子。">
+  <title>开心 · 把日子过成一封长信</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="stylesheet" href="./styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+  <header class="site-header" id="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="开心的小宇宙，返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M24 39.8S8.4 31 8.4 19.2A8.7 8.7 0 0 1 24 14a8.7 8.7 0 0 1 15.6 5.2C39.6 31 24 39.8 24 39.8Z"/>
+            <path d="M15.5 23.8c3.3-1.2 5.8-.4 8.5 2.2 2.7-2.6 5.2-3.4 8.5-2.2"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>开心</strong>
+          <small>KAIXIN'S UNIVERSE</small>
+        </span>
+      </a>
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+      <nav class="desktop-nav" aria-label="主导航">
+        <a class="nav-link is-active" href="#top">首页</a>
+        <a class="nav-link" href="#anniversaries">周年</a>
+        <a class="nav-link" href="#memories">文章</a>
+        <a class="nav-link" href="#gallery">相册</a>
+        <a class="nav-link" href="#about">关于</a>
+      </nav>
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+      <div class="nav-actions">
+        <a class="nav-pill" href="/archives/">
+          <span>5 个周年</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 4 6 6-6 6"/></svg>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar_pinkGirl.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://s2.loli.net/2023/07/14/aIPRGMfhmYAxCDE.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="开心"><span class="site-name">开心</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">开心</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/11/%E4%BB%8A%E5%A4%A9%E6%98%AF888%E5%A4%A9with%E5%BC%80%E5%BF%83/" title="今天是888天with开心"><img class="post-bg" src="/./img/1.GIF" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="今天是888天with开心"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/11/%E4%BB%8A%E5%A4%A9%E6%98%AF888%E5%A4%A9with%E5%BC%80%E5%BF%83/" title="今天是888天with开心">今天是888天with开心</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-11T09:00:43.000Z" title="发表于 2023-07-11 17:00:43">2023-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%92%8C%E5%BC%80%E5%BF%83%E7%BE%8E%E5%A5%BD%E6%97%B6%E5%85%89/">和开心美好时光</a></span></div><div class="content">888天纪念日 ✌</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/18/snow/" title="snow"><img class="post-bg" src="https://s2.loli.net/2023/07/18/56kNuwfsqjbpF7v.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="snow"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/18/snow/" title="snow">snow</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-18T06:07:33.000Z" title="发表于 2023-07-18 14:07:33">2023-07-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%88%B1%E4%BD%A0%E7%9A%84%E6%AF%8F%E5%A4%A9/">爱你的每天</a></span></div><div class="content">希望与你每一天</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/17/Patrick-Star/" title="Patrick Star"><img class="post-bg" src="https://s2.loli.net/2023/07/14/Kl6UE4OeYBIhaRW.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Patrick Star"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/17/Patrick-Star/" title="Patrick Star">Patrick Star</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-17T07:59:04.000Z" title="发表于 2023-07-17 15:59:04">2023-07-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D/">海绵宝宝</a></span></div><div class="content">总是闭着眼睛数星星，数来数去只有我是派大星</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/11/%E6%A0%87%E7%AD%BEtags%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/" title="标签tags分类测试"><img class="post-bg" src="/./img/12.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="标签tags分类测试"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/11/%E6%A0%87%E7%AD%BEtags%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/" title="标签tags分类测试">标签tags分类测试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-11T11:38:33.000Z" title="发表于 2023-07-11 19:38:33">2023-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E5%8A%A8%E7%89%A9/">小动物</a></span></div><div class="content">开心是个小鳄鱼</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/09/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/" title="置顶测试"><img class="post-bg" src="/./img/12.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="置顶测试"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/09/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/" title="置顶测试">置顶测试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-09T07:58:23.000Z" title="发表于 2023-07-09 15:58:23">2023-07-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5/">测试阶段</a></span></div><div class="content">置顶测试文档</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/07/06/12%E6%9C%88/" title="演示网页"><img class="post-bg" src="https://hd.wallpaperswide.com/thumbs/cute_girl_smelling_a_flower-t1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="演示网页"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/06/12%E6%9C%88/" title="演示网页">演示网页</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-06T07:50:03.000Z" title="发表于 2023-07-06 15:50:03">2023-07-06</time></span></div><div class="content">演示网页</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/06/%E6%BC%94%E7%A4%BA/" title="演示"><img class="post-bg" src="/./img/favicon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="演示"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/06/%E6%BC%94%E7%A4%BA/" title="演示">演示</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-06T06:50:03.000Z" title="发表于 2023-07-06 14:50:03">2023-07-06</time></span></div><div class="content">演示文档</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar_pinkGirl.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xiaoyu</div><div class="author-info__description">准备中</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.bilibili.com/bangumi/play/ss34230?from_spmid=666.25.recommend.0"><i class="fa-sharp fa-solid fa-clover"></i><span>小鳄鱼的秘密网站</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">开心是最最最好的！😋</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/snow/" title="snow"><img src="https://s2.loli.net/2023/07/18/56kNuwfsqjbpF7v.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="snow"/></a><div class="content"><a class="title" href="/2023/07/18/snow/" title="snow">snow</a><time datetime="2023-07-18T06:07:33.000Z" title="发表于 2023-07-18 14:07:33">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/17/Patrick-Star/" title="Patrick Star"><img src="https://s2.loli.net/2023/07/14/Kl6UE4OeYBIhaRW.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Patrick Star"/></a><div class="content"><a class="title" href="/2023/07/17/Patrick-Star/" title="Patrick Star">Patrick Star</a><time datetime="2023-07-17T07:59:04.000Z" title="发表于 2023-07-17 15:59:04">2023-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/11/%E6%A0%87%E7%AD%BEtags%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/" title="标签tags分类测试"><img src="/./img/12.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="标签tags分类测试"/></a><div class="content"><a class="title" href="/2023/07/11/%E6%A0%87%E7%AD%BEtags%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/" title="标签tags分类测试">标签tags分类测试</a><time datetime="2023-07-11T11:38:33.000Z" title="发表于 2023-07-11 19:38:33">2023-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/11/%E4%BB%8A%E5%A4%A9%E6%98%AF888%E5%A4%A9with%E5%BC%80%E5%BF%83/" title="今天是888天with开心"><img src="/./img/1.GIF" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="今天是888天with开心"/></a><div class="content"><a class="title" href="/2023/07/11/%E4%BB%8A%E5%A4%A9%E6%98%AF888%E5%A4%A9with%E5%BC%80%E5%BF%83/" title="今天是888天with开心">今天是888天with开心</a><time datetime="2023-07-11T09:00:43.000Z" title="发表于 2023-07-11 17:00:43">2023-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/09/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/" title="置顶测试"><img src="/./img/12.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="置顶测试"/></a><div class="content"><a class="title" href="/2023/07/09/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/" title="置顶测试">置顶测试</a><time datetime="2023-07-09T07:58:23.000Z" title="发表于 2023-07-09 15:58:23">2023-07-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="移动端导航">
+      <a href="#top"><span>01</span>首页</a>
+      <a href="#anniversaries"><span>02</span>周年</a>
+      <a href="#memories"><span>03</span>文章</a>
+      <a href="#gallery"><span>04</span>相册</a>
+      <a href="#about"><span>05</span>关于</a>
+      <a href="/archives/"><span>06</span>全部文章</a>
+    </nav>
+    <p>很幸福遇见你，开心。</p>
+  </div>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow--one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--two" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="eyebrow-dot"></span>
+            OUR LITTLE UNIVERSE
+          </p>
+          <h1 class="hero-title reveal" data-delay="80">
+            把日子过成<br>
+            <em>一封很长很长的信</em>
+          </h1>
+          <p class="hero-description reveal" data-delay="160">
+            从 2021 年立春开始，收藏每一次相遇、每一张照片，和那些舍不得忘记的小事。
+            主角只有两个：<strong>开心</strong>，还有一直在写故事的人。
+          </p>
+          <div class="hero-actions reveal" data-delay="240">
+            <a class="button button--primary" href="#anniversaries">
+              <span>看五周年</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button--text" href="#about">
+              认识我们
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="hero-facts reveal" data-delay="320">
+            <div>
+              <strong id="days-together">2,000+</strong>
+              <span>一起走过的日子</span>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%92%8C%E5%BC%80%E5%BF%83%E7%BE%8E%E5%A5%BD%E6%97%B6%E5%85%89/"><span class="card-category-list-name">和开心美好时光</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B0%8F%E5%8A%A8%E7%89%A9/"><span class="card-category-list-name">小动物</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5/"><span class="card-category-list-name">测试阶段</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D/"><span class="card-category-list-name">海绵宝宝</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%88%B1%E4%BD%A0%E7%9A%84%E6%AF%8F%E5%A4%A9/"><span class="card-category-list-name">爱你的每天</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%BC%94%E7%A4%BA/" style="font-size: 1.45em; color: rgb(4, 19, 52)">演示</a><a href="/tags/%E8%AF%AD%E5%BD%95/" style="font-size: 1.15em; color: rgb(199, 191, 76)">语录</a><a href="/tags/%E8%BF%98%E6%98%AF%E6%BC%94%E7%A4%BA/" style="font-size: 1.15em; color: rgb(169, 107, 117)">还是演示</a><a href="/tags/%E5%B0%8F%E9%B3%84%E9%B1%BC%E5%92%AC%E5%92%AC/" style="font-size: 1.15em; color: rgb(28, 33, 53)">小鳄鱼咬咬</a><a href="/tags/%F0%9F%92%8C%E6%83%85%E4%B9%A6/" style="font-size: 1.15em; color: rgb(26, 61, 186)">💌情书</a><a href="/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/" style="font-size: 1.15em; color: rgb(9, 165, 115)">纪念日</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">7</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">7</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-07-10T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-07-18T06:14:12.940Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2023/07/14/aIPRGMfhmYAxCDE.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020.11.4 - 2023 By Xiaoyu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">很幸福遇见你，开心</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <div>
+              <strong>05</strong>
+              <span>个周年纪念</span>
+            </div>
+            <div>
+              <strong>∞</strong>
+              <span>想说的话</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="180">
+          <div class="visual-backdrop" aria-hidden="true"></div>
+          <figure class="portrait-frame tilt-card">
+            <img src="./assets/images/hero-bg.jpg" alt="安静而温柔的纪念照片" width="1200" height="732">
+            <figcaption>
+              <span>SINCE</span>
+              <strong>2021.02.03</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="polaroid polaroid--snow tilt-card">
+            <img src="./assets/images/snow.jpg" alt="雪花主题的回忆照片" width="645" height="645" loading="lazy">
+            <figcaption>snow · 2023</figcaption>
+          </figure>
+
+          <div class="avatar-note tilt-card">
+            <img src="./assets/images/avatar-pink-girl.jpg" alt="开心头像" width="576" height="512" loading="lazy">
+            <div>
+              <span>今天也要</span>
+              <strong>开开心心呀</strong>
+            </div>
+          </div>
+
+          <div class="sticker sticker--happy" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.1-7-9.7A3.8 3.8 0 0 1 12 7.7a3.8 3.8 0 0 1 7 2.6C19 15.9 12 20 12 20Z"/></svg>
+            开心最最好
+          </div>
+          <span class="scribble scribble--one" aria-hidden="true">love &amp; days</span>
+          <span class="scribble scribble--two" aria-hidden="true">♡</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#memories" aria-label="向下滚动">
+        <span></span>
+        SCROLL TO REMEMBER
+      </a>
+    </section>
+
+    <div class="love-strip" aria-hidden="true">
+      <div class="love-strip__track">
+        <span>很幸福遇见你</span><i>✦</i><span>开心的小宇宙</span><i>✦</i><span>把普通的每天收藏起来</span><i>✦</i>
+        <span>很幸福遇见你</span><i>✦</i><span>开心的小宇宙</span><i>✦</i><span>把普通的每天收藏起来</span><i>✦</i>
+      </div>
+    </div>
+
+
+    <section class="section anniversaries" id="anniversaries">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span>FIVE ANNIVERSARIES</p>
+          <h2>五个春天，<em>五次偏爱</em></h2>
+        </div>
+        <p>从 2021.02.03 的立春开始，我们把喜欢过成了陪伴。每一张周年照片，都是“我依然选择你”的证明。</p>
+      </div>
+
+      <div class="anniversary-deck">
+        <article class="anniversary-card anniversary-card--blush tilt-card reveal">
+          <div class="anniversary-photo anniversary-photo--empty" data-photo="./assets/images/anniversaries/01-2022.jpg">
+            <img class="anniversary-photo__img" src="./assets/images/anniversaries/01-2022.jpg" alt="第 1 周年纪念照片" loading="eager" onload="this.closest('.anniversary-photo').classList.add('has-photo')" onerror="this.remove()">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+            <span>第 1 周年照片</span><small>01-2022.jpg</small>
+          </div>
+          <div class="anniversary-copy">
+            <span class="anniversary-no">01</span><time>2022.02.03</time>
+            <h3>第一年</h3>
+            <p>心动，终于变成了每一天的日常。</p>
+          </div>
+        </article>
+
+        <article class="anniversary-card anniversary-card--cream tilt-card reveal" data-delay="80">
+          <div class="anniversary-photo anniversary-photo--empty" data-photo="./assets/images/anniversaries/02-2023.jpg">
+            <img class="anniversary-photo__img" src="./assets/images/anniversaries/02-2023.jpg" alt="第 2 周年纪念照片" loading="eager" onload="this.closest('.anniversary-photo').classList.add('has-photo')" onerror="this.remove()">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+            <span>第 2 周年照片</span><small>02-2023.jpg</small>
+          </div>
+          <div class="anniversary-copy">
+            <span class="anniversary-no">02</span><time>2023.02.03</time>
+            <h3>第二年</h3>
+            <p>吵过、笑过，最后还是想牵你的手。</p>
+          </div>
+        </article>
+
+        <article class="anniversary-card anniversary-card--peach tilt-card reveal" data-delay="160">
+          <div class="anniversary-photo anniversary-photo--empty" data-photo="./assets/images/anniversaries/03-2024.jpg">
+            <img class="anniversary-photo__img" src="./assets/images/anniversaries/03-2024.jpg" alt="第 3 周年纪念照片" loading="eager" onload="this.closest('.anniversary-photo').classList.add('has-photo')" onerror="this.remove()">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+            <span>第 3 周年照片</span><small>03-2024.jpg</small>
+          </div>
+          <div class="anniversary-copy">
+            <span class="anniversary-no">03</span><time>2024.02.03</time>
+            <h3>第三年</h3>
+            <p>越来越懂你的欲言又止，也越来越懂你的欢喜。</p>
+          </div>
+        </article>
+
+        <article class="anniversary-card anniversary-card--sage tilt-card reveal" data-delay="240">
+          <div class="anniversary-photo anniversary-photo--empty" data-photo="./assets/images/anniversaries/04-2025.jpg">
+            <img class="anniversary-photo__img" src="./assets/images/anniversaries/04-2025.jpg" alt="第 4 周年纪念照片" loading="eager" onload="this.closest('.anniversary-photo').classList.add('has-photo')" onerror="this.remove()">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+            <span>第 4 周年照片</span><small>04-2025.jpg</small>
+          </div>
+          <div class="anniversary-copy">
+            <span class="anniversary-no">04</span><time>2025.02.03</time>
+            <h3>第四年</h3>
+            <p>把彼此认真写进未来，也把平凡日子过成浪漫。</p>
+          </div>
+        </article>
+
+        <article class="anniversary-card anniversary-card--rose tilt-card reveal" data-delay="320">
+          <div class="anniversary-photo anniversary-photo--empty" data-photo="./assets/images/anniversaries/05-2026.jpg">
+            <img class="anniversary-photo__img" src="./assets/images/anniversaries/05-2026.jpg" alt="第 5 周年纪念照片" loading="eager" onload="this.closest('.anniversary-photo').classList.add('has-photo')" onerror="this.remove()">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+            <span>第 5 周年照片</span><small>05-2026.jpg</small>
+          </div>
+          <div class="anniversary-copy">
+            <span class="anniversary-no">05</span><time>2026.02.03</time>
+            <h3>第五年</h3>
+            <p>五年以后，还是会因为见到你而开心。</p>
+          </div>
+        </article>
+      </div>
+      <p class="photo-help reveal">照片上传后，将按上方文件名放入 <code>assets/images/anniversaries/</code>，对应图片会自动出现在周年卡片中。</p>
+    </section>
+
+
+    <section class="section memories" id="memories">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span>LOVE · MEMORY · DAYS</p>
+          <h2>恋爱贴，纪念贴，<em>还有日常贴</em></h2>
+        </div>
+        <p>不再保留测试内容。这里只写我们：那些想对你说的话、值得纪念的节点，以及认真生活过的普通一天。</p>
+      </div>
+
+      <div class="memory-grid">
+        <article class="memory-card memory-card--feature tilt-card reveal">
+          <div class="feature-visual">
+            <span class="paper-label">FIFTH ANNIVERSARY</span>
+            <div class="feature-photo-slot" data-photo="./assets/images/anniversaries/05-2026.jpg">
+              <img class="feature-photo-slot__img" src="./assets/images/anniversaries/05-2026.jpg" alt="第五周年主照片" loading="eager" onload="this.closest('.feature-photo-slot').classList.add('has-photo')" onerror="this.remove()">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 15h8l3-5h10l3 5h8v24H8z"/><circle cx="24" cy="27" r="7"/></svg>
+              <span>第 5 周年主照片</span>
+            </div>
+            <div class="feature-orbit" aria-hidden="true"><span>2021</span><span>TO</span><span>2026</span><span>♡</span></div>
+          </div>
+          <div class="memory-copy">
+            <div class="memory-meta"><span>纪念贴</span><time datetime="2026-02-03">2026.02.03</time><span>五周年</span></div>
+            <h3>五年了，还是想和你<br>过很多很多年</h3>
+            <p>五年不是热恋的结束，而是我们终于知道：爱是每天都在重新选择彼此。</p>
+            <span class="draft-label">五周年纪念内容 · 等待放入正式照片</span>
+          </div>
+        </article>
+
+        <article class="memory-card memory-card--photo tilt-card reveal" data-delay="80">
+          <a href="/2023/07/18/snow/" class="memory-image">
+            <img src="./assets/images/snow.jpg" alt="snow 文章配图" width="645" height="645" loading="lazy">
+            <span class="image-number">日常</span>
+          </a>
+          <div class="memory-copy">
+            <div class="memory-meta"><span>日常贴</span><time datetime="2023-07-18">2023.07.18</time><span>爱你的每天</span></div>
+            <h3><a href="/2023/07/18/snow/">snow</a></h3>
+            <p>希望与你每一天，也期待和你一起看每一场雪。</p>
+          </div>
+        </article>
+
+        <article class="memory-card memory-card--quote tilt-card reveal" data-delay="140">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <div class="memory-meta"><span>恋爱贴</span><time datetime="2023-07-17">2023.07.17</time><span>海绵宝宝</span></div>
+          <h3><a href="/2023/07/17/Patrick-Star/">Patrick Star</a></h3>
+          <p>总是闭着眼睛数星星，数来数去只有我是派大星</p>
+          <a class="circle-link" href="/2023/07/17/Patrick-Star/" aria-label="阅读 Patrick Star"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4"/></svg></a>
+          <img class="quote-stamp" src="./assets/images/patrick-star.jpg" alt="" width="768" height="512" loading="lazy" aria-hidden="true">
+        </article>
+
+        <article class="memory-card memory-card--simple tilt-card reveal">
+          <div class="memory-index">04</div>
+          <div class="memory-meta"><span>纪念贴</span><time datetime="2023-07-11">2023.07.11</time><span>第 888 天</span></div>
+          <h3><a href="/2023/07/11/%E4%BB%8A%E5%A4%A9%E6%98%AF888%E5%A4%A9with%E5%BC%80%E5%BF%83/">888天的我们</a></h3>
+          <p>从 2021.02.03 到第 888 天，原来我们已经一起走了这么远。</p>
+          <div class="tag-row"><span># 纪念贴</span><span># 888天</span></div>
+        </article>
+
+        <article class="memory-card memory-card--simple memory-card--peach tilt-card reveal" data-delay="70">
+          <div class="memory-index">05</div>
+          <div class="memory-meta"><span>恋爱贴</span><span>持续更新</span></div>
+          <h3>想和你做的<br>100 件小事</h3>
+          <p>去看海、去旅行、一起做饭，也一起浪费很多个无所事事的下午。</p>
+          <div class="tag-row"><span># 恋爱贴</span><span># To Do</span></div>
+        </article>
+
+        <article class="memory-card memory-card--simple memory-card--cream tilt-card reveal" data-delay="140">
+          <div class="memory-index">06</div>
+          <div class="memory-meta"><span>日常贴</span><span>日常记录</span></div>
+          <h3>把普通的每天，<br>写成一封情书</h3>
+          <p>早餐、晚风、散步和晚安。真正珍贵的故事，常常没有多么轰轰烈烈。</p>
+          <div class="tag-row"><span># 日常贴</span><span># 生活碎片</span></div>
+        </article>
+
+        <article class="memory-card memory-card--simple memory-card--sage tilt-card reveal" data-delay="210">
+          <div class="memory-index">07</div>
+          <div class="memory-meta"><span>纪念贴</span><span>2021 — 2026</span></div>
+          <h3>我们的时间胶囊</h3>
+          <p>收好每一张周年照片和每一句当时没来得及说的话，留着以后一起翻看。</p>
+          <div class="tag-row"><span># 纪念贴</span><span># 时间胶囊</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="journey-shell">
+        <div class="journey-intro reveal">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span>OUR TIMELINE</p>
+          <h2>从立春出发，<br><em>走进第五个春天。</em></h2>
+          <p>2021.02.03 是故事的起点，也是立春。此后每一年同一天，都成为我们回望时最清晰的坐标。</p>
+          <a class="button button--light" href="#anniversaries">
+            看我们的五周年
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="timeline reveal" data-delay="120">
+          <article class="timeline-item">
+            <time>2021<small>02.03</small></time>
+            <div><span>故事开始 · 立春</span><h3>从这一天起，我的四季里多了一个你。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>2022<small>02.03</small></time>
+            <div><span>第一周年</span><h3>一起走过一轮春夏秋冬，喜欢也变成了陪伴。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>2023<small>02.03</small></time>
+            <div><span>第二周年</span><h3>我们还是我们，并且比从前更靠近彼此。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>2024<small>02.03</small></time>
+            <div><span>第三周年</span><h3>学会了理解、包容，也学会把爱放进细节。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>2025<small>02.03</small></time>
+            <div><span>第四周年</span><h3>未来不再只是各自的计划，而是我们一起的答案。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>2026<small>02.03</small></time>
+            <div><span>第五周年</span><h3>五周年快乐，仍然想和你继续写下去。</h3></div>
+          </article>
+          <article class="timeline-item">
+            <time>NOW<small>继续</small></time>
+            <div><span>未完待续</span><h3>第六年、第十年、很多很多年以后，还是你。</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="section-heading section-heading--center reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>PHOTO NOTES</p>
+        <h2>镜头替我们，<em>记住那一刻</em></h2>
+        <p>照片不会说话，但看到它的时候，我们又想起了那天的风、光和心情。</p>
+      </div>
+
+      <div class="gallery-grid">
+        <a class="gallery-item gallery-item--wide tilt-card reveal" href="/images/" aria-label="进入照片页面">
+          <img src="./assets/images/hero-bg.jpg" alt="温柔的纪念照片" width="1200" height="732" loading="lazy">
+          <span class="gallery-caption"><strong>普通一天</strong><small>因为和你一起，所以特别</small></span>
+          <span class="gallery-index">01 / 03</span>
+        </a>
+        <a class="gallery-item gallery-item--portrait tilt-card reveal" data-delay="100" href="/images/" aria-label="进入照片页面">
+          <img src="./assets/images/patrick-star.jpg" alt="派大星文章配图" width="768" height="512" loading="lazy">
+          <span class="gallery-caption"><strong>一起看星星</strong><small>数来数去，只剩我们</small></span>
+        </a>
+        <a class="gallery-item gallery-item--square tilt-card reveal" data-delay="180" href="/images/" aria-label="进入照片页面">
+          <img src="./assets/images/snow.jpg" alt="雪花主题照片" width="645" height="645" loading="lazy">
+          <span class="gallery-caption"><strong>想和你一起看雪</strong><small>四季都想有你</small></span>
+        </a>
+        <a class="gallery-item gallery-item--small tilt-card reveal" data-delay="240" href="/images/" aria-label="进入照片页面">
+          <img src="./assets/images/memory-12.webp" alt="小鳄鱼主题配图" width="526" height="500" loading="lazy">
+          <span class="gallery-caption"><strong>开心的小世界</strong><small>永远可可爱爱</small></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-shell">
+        <div class="about-visual reveal">
+          <div class="about-ring" aria-hidden="true"></div>
+          <figure class="about-photo tilt-card">
+            <img src="./assets/images/avatar-pink-girl.jpg" alt="开心头像" width="576" height="512" loading="lazy">
+          </figure>
+          <div class="about-sticker tilt-card">
+            <span>KEEP</span>
+            <strong>SMILE :)</strong>
+          </div>
+          <div class="about-note">
+            <span>网站的主人</span>
+            <strong>Xiaoyu</strong>
+            <small>故事的另一个主角</small>
+          </div>
+        </div>
+
+        <div class="about-copy reveal" data-delay="120">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>ABOUT THIS SITE</p>
+          <h2>这不是作品集，<br>是一封<em>慢慢变长的信。</em></h2>
+          <p class="about-lead">“开心是最最最好的！”</p>
+          <p>网站分成恋爱贴、纪念贴和日常贴，收藏照片、想对你说的话，以及那些看起来微不足道、回头看却很珍贵的小事。</p>
+          <div class="site-stats">
+            <div><strong>08</strong><span>篇小记</span></div>
+            <div><strong>05</strong><span>个周年</span></div>
+            <div><strong>03</strong><span>种专栏</span></div>
+          </div>
+          <div class="about-links">
+            <a href="/about/">关于我们 <span>↗</span></a>
+            <a href="/link/">友情链接 <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-orbit closing-orbit--one" aria-hidden="true"></div>
+      <div class="closing-orbit closing-orbit--two" aria-hidden="true"></div>
+      <p class="eyebrow eyebrow--light reveal"><span class="eyebrow-dot"></span>TO BE CONTINUED</p>
+      <h2 class="reveal" data-delay="80">很幸福遇见你，<em>开心。</em></h2>
+      <p class="reveal" data-delay="160">下一篇文章、下一张照片、下一个纪念日，我们慢慢写。</p>
+      <a class="button button--light reveal" data-delay="220" href="#top">
+        回到最初
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand brand--footer" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 39.8S8.4 31 8.4 19.2A8.7 8.7 0 0 1 24 14a8.7 8.7 0 0 1 15.6 5.2C39.6 31 24 39.8 24 39.8Z"/><path d="M15.5 23.8c3.3-1.2 5.8-.4 8.5 2.2 2.7-2.6 5.2-3.4 8.5-2.2"/></svg>
+        </span>
+        <span class="brand-copy"><strong>开心</strong><small>KAIXIN'S UNIVERSE</small></span>
+      </a>
+      <p>把平凡的日子，认真收藏起来。</p>
+      <div class="footer-nav">
+        <a href="#memories">回忆</a>
+        <a href="#gallery">相册</a>
+        <a href="/archives/">文章</a>
+        <a href="#about">关于</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="current-year">2026</span> Xiaoyu · Made with love</p>
+      <p>自 2021.02.03 起 · <span id="footer-days">2000+</span> 天</p>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=3"></script>
+</body>
+</html>
